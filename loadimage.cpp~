@@ -1,0 +1,4 @@
+#include <iostream>
+#include <fstream>
+
+void loadImage(const std::string& file)
