@@ -10,6 +10,10 @@ void loadImage(const std::string & config_file)
 {
   std::ifstream F;
   F.open(config_file.c_str());
+  
+  if(!F)    
+     cout<<"error"<<config_file<<endl;
+	
   std::string s1;
   std::string timestamp;
   std::string imagepath;
@@ -31,6 +35,10 @@ void loadImage(const std::string & config_file)
   std::string strFile = timestamp;
   std::ifstream f;
   f.open(strFile.c_str());
+
+  if(!f)    
+     cout<<"error"<<strFile<<endl;
+	
   // skip first lines
   std::string s0;
   std::getline(f,s0);
